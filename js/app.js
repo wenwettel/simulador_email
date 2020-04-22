@@ -82,6 +82,7 @@ function resetFormulario(e) {
     validarCampo('' ,email);
     validarCampo('', mensaje);
     validarCampo('', asunto);
+    btnEnviar.disabled = true;
     
 }
 
@@ -110,7 +111,8 @@ function enviarEmail(e) {
 
         setTimeout(function() {
             enviado.remove();
-            formularioEnviar.reset();
+            resetBtn.click();
+
         }, 5000);
 
 
